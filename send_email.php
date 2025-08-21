@@ -12,10 +12,10 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
 
-    // ✅ Generate a 6-digit OTP
+    // Generate a 6-digit OTP
     $otp = rand(100000, 999999);
 
-    // ✅ (Optional) Store OTP in session for later verification
+    // (Optional) Store OTP in session for later verification
     session_start();
     $_SESSION['otp'] = $otp;
     $_SESSION['email'] = $email;
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
         $mail->Host = 'smtp.gmail.com';                     
         $mail->SMTPAuth = true;                                   
         $mail->Username = 'kalai2003testing@gmail.com';                     
-        $mail->Password = 'wmpuudckyedcgesf';     // ⚠️ Use App Password, not Gmail password                 
+        $mail->Password = 'wmpuudckyedcgesf';     // Use App Password, not Gmail password                 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
         $mail->Port = 587;                                    
 
